@@ -1,0 +1,154 @@
+/* ===========================
+   Colores corporativos
+=========================== */
+:root {
+    --verde-ces: #9DBE15; /* Verde corporativo */
+    --verde-oscuro: #7A9410; /* Verde más oscuro para hover/bordes */
+    --blanco: #ffffff;
+    --gris-claro: #f8f9fa; /* Para fondos */
+}
+
+/* ===========================
+   Body
+=========================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+    background-color: var(--blanco);
+}
+
+/* ===========================
+   Navbar moderno
+=========================== */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important; /* ligero glass effect */
+    backdrop-filter: blur(6px);
+    border-bottom: 2px solid var(--verde-ces);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand span {
+    color: var(--verde-ces);
+    font-weight: 700;
+}
+
+/* Links animados */
+.navbar-nav .nav-link {
+    position: relative;
+    color: #212529;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: var(--verde-ces);
+    transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(157,190,21,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3e%3c/svg%3e");
+}
+
+/* ===========================
+   Hero reducido
+=========================== */
+section.bg-light.py-3.border-bottom {
+    background-color: var(--gris-claro) !important;
+}
+
+/* ===========================
+   Títulos
+=========================== */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--verde-ces);
+}
+
+/* ===========================
+   Lead paragraph
+=========================== */
+.lead {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* ===========================
+   Carousel
+=========================== */
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ===========================
+   Blockquote
+=========================== */
+blockquote {
+    border-left: 5px solid var(--verde-ces);
+    padding-left: 1rem;
+    font-style: italic;
+    color: #555;
+}
+
+/* ===========================
+   Cards
+=========================== */
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+    color: var(--verde-ces);
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer a:hover {
+    color: var(--verde-ces);
+}
+
+/* ===========================
+   Responsive adjustments
+=========================== */
+@media (max-width: 768px) {
+    .carousel-item img {
+        max-height: 300px;
+    }
+    .navbar-brand {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* ===========================
+   Efecto sticky navbar al hacer scroll (opcional)
+=========================== */
+.navbar.scrolled {
+    background-color: var(--blanco) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
